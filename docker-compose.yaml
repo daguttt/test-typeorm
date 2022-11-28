@@ -1,0 +1,14 @@
+# Use postgres/example user/password credentials
+version: "3.1"
+
+services:
+    postgres:
+        image: postgres
+        container_name: test-typeorm
+        restart: always
+        ports:
+            - "5437:5432"
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: example
+            POSTGRES_DB: test-typeorm
